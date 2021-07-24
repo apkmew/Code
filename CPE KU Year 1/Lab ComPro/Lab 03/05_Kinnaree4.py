@@ -1,0 +1,5 @@
+a = input('Enter string : ')
+n = len(a)
+print('align --- ' + (' '*(20-n)) + a + ' --- right')
+print('align --- ' + a + (' '*(20-n)) + ' --- left')
+print('align --- ' + (' '*((20-n)//2)) + a + (' '*((20-n)//2)) + ' --- center')

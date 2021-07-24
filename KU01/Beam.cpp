@@ -1,23 +1,46 @@
-#include <bits/stdc++.h>
+/*
+    Task	: Beam [ KU01 ]
+    Language: C++
+    Author	: Apkmew
+    School	: Kasetsart University
+    Created	: 09 May 2021 [21:27]
+    Algo	: Controlflow ( Loop + If-Else )
+    Status	: Completed
+*/
+#include<bits/stdc++.h>
 using namespace std;
-int x[110][5],y[110][5];
+int a[550][5],b[550][5];
 int main(){
-    int n1,n2,i,ii=0,jj=0;
-    scanf("%d",&n1); for(i=1;i<=n1;i++){
-        scanf("%d",&x[i][0]);
-        x[i][1] = i%2;
-    } 
-    scanf("%d",&n2); for(i=1;i<=n2;i++){
-        scanf("%d",&y[i][0]);
-        y[i][1] = i%2;
-    } 
-    while (ii<=n1 && jj<=n2)
-    {
-        if(x[ii][0]<=y[jj][0] && ii<=n1){
-            ii++;
-            
-        } 
+    ios_base::sync_with_stdio(0); cin.tie(0),cout.tie(0);
+    int n,m,i,j,ans=0,ch;
+    cin >> n >> m;
+    for(i=1;i<=n;i++){
+        cin >> a[i][0];
+        a[i][1] = i%2;
     }
-    
+    for(i=1;i<=m;i++){
+        cin >> b[i][0];
+        b[i][1] = i%2;
+    }
+    i = j = 0;
+    while(i<=n && j<=m){
+        ch = 0;
+        while(a[i][0]<=b[j][0] && i<n){
+            i++;
+            ch = 1;
+            if(a[i][1]!=b[j][1] && a[i-1][0]!=b[j][0]) ans++;
+            else if(a[i][0]<=b[j][0] && a[i-1][0]>b[j-1][0]) ans++;
+            else if(a[i][0]>=b[j][0] && a[i-1][0]<b[j-1][0]) ans++;
+        }
+        while(b[j][0]<a[i][0] && j<m){
+            j++;
+            ch = 1;
+            if(b[j][1]!=a[i][1] && a[i][0]!=b[j-1][0]) ans++;
+            else if(b[j][0]<=a[i][0] && b[j-1][0]>a[i-1][0]) ans++;
+            else if(b[j][0]>=a[i][0] && b[j-1][0]<a[i-1][0]) ans++;
+        }
+        if(!ch) break;
+    }
+    cout << ans+1;
     return 0;
 }

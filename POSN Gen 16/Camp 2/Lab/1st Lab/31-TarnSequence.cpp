@@ -23,6 +23,13 @@ int main()
         if(ii==cnt) cnt++;
         ans[ii] = x[i];
     }
+    for(int i=0;i<n;i++){
+        for(int j=0;j<v[i].size();j++){
+            printf("%d ",v[i][j]);
+        }
+        printf("\n");
+    }
+    
     printf("%d\n",cnt);
     cnt--;
     int cou = cnt+1;
@@ -41,6 +48,7 @@ int main()
         printf("%d ",ans[i]);
     }
     printf("\n");
+    
     return 0;
 }
 /*

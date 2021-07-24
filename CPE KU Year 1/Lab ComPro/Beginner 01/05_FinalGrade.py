@@ -1,0 +1,13 @@
+hw = int(input('What is the percentage for homework? '))
+md = int(input('What is the percentage for midterm? '))
+fn = int(input('What is the percentage for final? '))
+total = hw / 10 + md * 20 / 100 + fn * 70 / 100
+print(f'Total score: {total:.2f}')
+if total >= 80 : print('You receive the grade A')
+elif total >= 75 : print('You receive the grade B+')
+elif total >= 70 : print('You receive the grade B')
+elif total >= 65 : print('You receive the grade C+')
+elif total >= 60 : print('You receive the grade C')
+elif total >= 55 : print('You receive the grade D+')
+elif total >= 50 : print('You receive the grade D')
+else : print('You receive the grade F')
