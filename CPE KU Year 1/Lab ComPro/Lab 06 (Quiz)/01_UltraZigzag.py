@@ -44,8 +44,8 @@ if opr == 4 :
 if opr == 5 :
     i,j,cou = n-1,0,0
     while True :
-        if l%2==1 and i == 0 and j == 0 : break
-        if l%2==0 and i == -1 and j == 0 : break
+        if n%2==0 and i == 0 and j == 0 : break
+        if n%2==1 and i == -1 and j == 0 : break
         while j >= 0 :
             if cou >= l : table[i][j] = '*'
             else : table[i][j] = a[cou]
@@ -53,8 +53,8 @@ if opr == 5 :
             i -= 1
             j -= 1
         j += 1
-        if l%2==1 and i == 0 and j == 0 : break
-        if l%2==0 and i == -1 and j == 0 : break
+        if n%2==0 and i == 0 and j == 0 : break
+        if n%2==1 and i == -1 and j == 0 : break
         while i < n : 
             if cou >= l : table[i][j] = '*'
             else : table[i][j] = a[cou]
@@ -62,12 +62,11 @@ if opr == 5 :
             i += 1
             j += 1
         i -= 1
-    if l%2 == 0 : i,j =  0,0
+    if n%2 == 0 : i,j =  0,0
     else : i,j = 0,1
     while True :
         if i == 0 and j == n-1 : break
         while j < n : 
-            print(i,j,cou)
             if cou >= l : table[i][j] = '*'
             else : table[i][j] = a[cou]
             cou += 1
@@ -77,7 +76,6 @@ if opr == 5 :
         j -= 1
         if i == 0 and j == n-1 : break
         while i >= 0 :
-            print(i,j,cou)
             if cou >= l : table[i][j] = '*'
             else : table[i][j] = a[cou]
             cou += 1
