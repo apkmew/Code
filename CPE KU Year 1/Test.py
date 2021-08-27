@@ -1,3 +1,4 @@
-a = [1,2,3,4,5]
-a.clear()
-print(a)
+import itertools as itt
+comb = [0,1,2,3]
+all = [x for x in itt.permutations(comb)]
+print(all)
