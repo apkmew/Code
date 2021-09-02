@@ -1,0 +1,8 @@
+Price
+bread 20
+orange 10
+apple 30
+List
+orange 10
+apple 3
+bread 5

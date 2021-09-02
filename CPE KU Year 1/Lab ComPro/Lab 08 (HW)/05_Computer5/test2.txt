@@ -1,0 +1,2 @@
+Another protection mechanism implemented in many computers is a read-only flag. 
+this flag is used by the computer system to hide essential system files that users should not alter.

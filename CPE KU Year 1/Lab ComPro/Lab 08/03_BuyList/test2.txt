@@ -1,0 +1,11 @@
+List
+orange 12
+apple 4
+grape 20
+bread 14
+banana 30
+Price
+bread 17
+apple 45
+orange 70
+grape 100
