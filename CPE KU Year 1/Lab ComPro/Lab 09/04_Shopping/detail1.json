@@ -1,0 +1,44 @@
+{
+    "products":[
+        {
+            "product_name": "Apple",
+            "price": "15"
+        },
+        {
+            "product_name": "Banana",
+            "price": "29"
+        },
+        {
+            "product_name": "Grape",
+            "price": "44"
+        }
+    ],
+    "customers":[
+        {
+            "customer_name": "Tokyo",
+            "order": {
+                "Apple": 3,
+                "Banana": 5
+            },
+            "money": 1000
+        },
+        {
+            "customer_name": "ant",
+            "order": {
+                "Apple": 3,
+                "Grape": 5
+            },
+            "money": 10003
+        },
+        {
+            "customer_name": "Japan",
+            "order": {
+                "Apple": 1,
+                "Grape": 1,
+                "Banana": 1
+            },
+            "money": 88
+        }
+    ]
+
+}

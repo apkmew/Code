@@ -1,0 +1,8 @@
+[
+  {"sepalLength": 1.0, "sepalWidth": 3.0, "petalLength": 5.0, "petalWidth": 0.2, "species": "Blue"},
+  {"sepalLength": 2.0, "sepalWidth": 3.0, "petalLength": 5.0, "petalWidth": 0.2, "species": "Blue"},
+  {"sepalLength": 3.0, "sepalWidth": 3.0, "petalLength": 5.0, "petalWidth": 0.2, "species": "Blue"},
+  {"sepalLength": 4.0, "sepalWidth": 3.0, "petalLength": 7.0, "petalWidth": 0.4, "species": "Wall"},
+  {"sepalLength": 5.0, "sepalWidth": 3.0, "petalLength": 7.0, "petalWidth": 0.4, "species": "Wall"},
+  {"sepalLength": 5.0, "sepalWidth": 3.0, "petalLength": 7.0, "petalWidth": 0.4, "species": "Wall"}
+]

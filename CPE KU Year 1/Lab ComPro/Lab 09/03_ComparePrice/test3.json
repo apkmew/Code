@@ -1,0 +1,16 @@
+[
+{"Product type": "Snack", "Brand": "Kitty", "Cost":"2"},
+{"Product type": "Snack", "Brand": "Tara", "Cost":"4"},
+{"Product type": "Pen", "Brand": "Pilot", "Cost":"7"},
+{"Product type": "Snack", "Brand": "Hanani", "Cost":"1"},
+{"Product type": "Snack", "Brand": "Potato", "Cost":"5"},
+{"Product type": "Pencil", "Brand": "Pentel", "Cost":"6"},
+{"Product type": "Snack", "Brand": "Doze", "Cost":"3"},
+{"Product type": "Pen", "Brand": "Pentel", "Cost":"8"},
+{"Product type": "Pen", "Brand": "Horse", "Cost":"9"},
+{"Product type": "Water", "Brand": "Crystol", "Cost":"10"},
+{"Product type": "Rice", "Brand": "Sangood", "Cost":"11"},
+{"Product type": "Water", "Brand": "Nestloop", "Cost":"12"},
+{"Product type": "Milk", "Brand": "Majic", "Cost":"13"},
+{"Product type": "Water", "Brand": "Aurora", "Cost":"14"}
+]
