@@ -1,3 +1,1 @@
-l = ['ac','x','d','a']
-l.sort()
-print(l)
+print('a' + '\t' + 'a')
