@@ -30,9 +30,9 @@ class Circle :
     def __init__(self,r) :
         self.r = r
     def area(self) :
-        return 3.14*r*r
+        return round(3.14*r*r,2)
     def perimeter(self) :
-        return 3.14*r*2
+        return round(2*3.14*r,2)
 
 l = int(input("Enter rectangle length : "))  
 w = int(input("Enter rectangle width : "))  
