@@ -1,1 +1,1 @@
-print('a' + '\t' + 'a')
+print('a'.isalpha())
