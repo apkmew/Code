@@ -1,6 +1,6 @@
 cou = 0
 def stair(level) :
-    global cou,a,b,c
+    global cou
     if level == n :
         cou += 1
         return

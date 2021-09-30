@@ -11,6 +11,8 @@ def combi(total) :
     if total == x :
         print(' '.join(ans))
         exit(0)
+    if total > x :
+        return
     for i in mp : 
         if i not in ans :
             ans.append(i)

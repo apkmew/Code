@@ -9,14 +9,14 @@
 int n,r,k,a[20],b[20],cnt=0;
 void permu(int state,int last){
     if(state==r){
-        //cnt++;
-        //if(cnt==k){
+        cnt++;
+        if(cnt==k){
             for(int i=0;i<r;i++){
                 printf("%d ",b[i]);
             }
             printf("\n");
-            //exit(0);
-        //}
+            exit(0);
+        }
         return ;
     }
     for(int i=last+1;i<=n;i++){
@@ -27,6 +27,7 @@ void permu(int state,int last){
             a[i]=0;
         }
     }
+    return ;
 }
 int main()
 {
