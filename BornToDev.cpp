@@ -1,12 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
-int a[16] = {1,2,3,5,7,9,11,13,15,17,19,21,23,25,27,29};
 int main()
 {
-    int n,x;
-    scanf("%d",&n);
-    x = lower_bound(a,a+16,n)-a;
-    if(n==a[x]) printf("%d",x);
-    else printf("-1");
+    int mx = -2e9,num;
+    char a;
+    //scanf("[");
+    while(0){
+        scanf("%d%c",&num,&a);
+        mx = max(mx,num);
+        printf("%d ",num);
+        printf("%c ",a);
+        if(a==']') break;
+    }
+    printf("%d",mx);
     return 0;
 }
