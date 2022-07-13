@@ -2,7 +2,7 @@
 using namespace std;
 char a[1000100],b[1000100];
 int n,m,i,k,q,pie[1000100],ans=0;
-int pietable(char p[1000100]){
+void pietable(char p[]){
     pie[1] = 0, k = 0;
     for(q=2;q<=m;q++){
         while(k>0 && p[k+1]!=p[q])
@@ -10,10 +10,10 @@ int pietable(char p[1000100]){
         if(p[k+1]==p[q]) k++;
         pie[q] = k;
     }
-    return pie;
+    //return pie;
 }
-void kmp(char t[1000100],char p[1000100]){
-    pie = pietable(p);
+void kmp(char t[],char p[]){
+    pietable(p);
     q = 0;
     for(i=1;i<=n;i++){
         while(q>0 && p[q+1]!=t[i])
