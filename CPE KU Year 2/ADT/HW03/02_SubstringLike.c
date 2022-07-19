@@ -40,7 +40,7 @@ aba
 acabababababcbabab
 aba
 18 3 1
-acabababababcbabab
+acabababababcabbab
 abc
 15 4 2
 AAAGTGTGTCTGATT
