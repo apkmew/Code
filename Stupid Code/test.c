@@ -1,5 +1,6 @@
 #include <stdio.h>
+short a[100000][100000];
 int main(){
-    printf("%d",1&&1);
+
     return 0;
 }
