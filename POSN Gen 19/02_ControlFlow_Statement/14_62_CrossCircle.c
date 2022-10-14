@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 int main(){
     int q;
     double dis,h1,k1,r1,h2,k2,r2;
