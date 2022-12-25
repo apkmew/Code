@@ -5,7 +5,7 @@
     School	: Kasetsart University
     Created	: 25 December 2022 [13:25]
     Algo	: Stack
-    Status	: Debugging
+    Status	: Completed
 */
 #include<bits/stdc++.h>
 using namespace std;

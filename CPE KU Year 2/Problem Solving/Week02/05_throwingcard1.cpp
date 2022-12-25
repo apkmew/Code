@@ -5,7 +5,7 @@
     School	: Kasetsart University
     Created	: 19 December 2022 [15:22]
     Algo	: Linked list
-    Status	: Debugging
+    Status	: Completed
 */
 #include<bits/stdc++.h>
 using namespace std;
