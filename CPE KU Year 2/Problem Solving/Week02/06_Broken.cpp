@@ -14,23 +14,27 @@ char a[100100];
 int main(){
     ios_base::sync_with_stdio(0); cin.tie(0),cout.tie(0);
     int ch=0,len,i;
-    gets(a);
-    len = strlen(a);
-    for(i=0;i<len;i++){
-        if(a[i] == '[' && !ch) ch = 1;
-        else if(a[i] == ']' && ch){
-            ch = 0;
-            l.splice(l.begin(),b);
-            b.clear();
+    while(scanf(" %s",a) != EOF){
+        len = strlen(a);
+        for(i=0;i<len;i++){
+            if(a[i] == '[' && !ch) ch = 1;
+            else if(a[i] == ']' && ch){
+                ch = 0;
+                l.splice(l.begin(),b);
+                b.clear();
+            }
+            else if(a[i] == '[' && ch){
+                l.splice(l.begin(),b);
+                b.clear();
+            }
+            else if(ch) b.push_back(a[i]);
+            else if(!ch && a[i] != ']') l.push_back(a[i]);
         }
-        else if(a[i] == '[' && ch){
-            l.splice(l.begin(),b);
-            b.clear();
-        }
-        else if(ch) b.push_back(a[i]);
-        else if(!ch && a[i] != ']') l.push_back(a[i]);
+        if(!b.empty()) l.splice(l.begin(),b);
+        for(auto x:l) cout << x;
+        cout << "\n";
+        l.clear();
     }
-    for(auto x:l) cout << x;
     return 0;
 }
 /*

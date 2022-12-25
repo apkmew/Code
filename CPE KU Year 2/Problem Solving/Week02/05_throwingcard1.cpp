@@ -19,10 +19,10 @@ int main(){
         for(i=1;i<=n;i++){
             l.push_back(i);
         }
-        cout << "Discarded cards: ";
+        cout << "Discarded cards:";
         while(l.size() != 1){
-            cout << l.front();
-            if(l.size() != 2) cout << ", ";
+            cout << " " << l.front();
+            if(l.size() != 2) cout << ",";
             l.pop_front();
             l.push_back(l.front());
             l.pop_front();
