@@ -4,8 +4,8 @@
     Author	: Apkmew
     School	: Kasetsart University
     Created	: 26 December 2022 [15:28]
-    Algo	: 
-    Status	: Incomplete
+    Algo	: Loop
+    Status	: Completed
 */
 #include<bits/stdc++.h>
 using namespace std;
