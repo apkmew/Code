@@ -11,14 +11,14 @@
 using namespace std;
 vector<int> g[100100],fact;
 queue<int> st,fc;
-int mark[100100],storage[100100],factory[100100],ans[100100],mark2[100100][5];
+int mark[100100],storage[100100],factory[100100],ans[100100];
 struct A{
-    int u,v,dis;
+    int v,dis;
 };
 queue<A> bfs;
 int main(){
     ios_base::sync_with_stdio(0); cin.tie(0),cout.tie(0);
-    int n,m,s,t,u,v,i,dis;
+    int n,m,s,t,u,v,i,dis,k;
     cin >> n >> m >> s >> t;
     for(i=0;i<m;i++){
         cin >> u >> v;
@@ -40,54 +40,49 @@ int main(){
         for(i=0;i<s;i++){
             u = st.front();
             st.pop();
-            bfs.push({u,u,0});
+            bfs.push({u,0});
         }
         while(!bfs.empty()){
-            u = bfs.front().u;
-            v = bfs.front().v;
+            u = bfs.front().v;
             dis = bfs.front().dis;
             bfs.pop();
-            if(mark[v]) continue;
-            mark[v] = 1;
-            if(factory[v]){
+            if(mark[u]) continue;
+            mark[u] = 1;
+            if(factory[u]){
                 for(i=0;i<fact.size();i++){
-                    if(fact[i]==v){
+                    if(fact[i]==u){
                         ans[i] = dis;
                         break;
                     } 
                 }
             } 
-            for(auto x:g[v]){
+            for(auto x:g[u]){
                 if(mark[x]) continue;
-                bfs.push({u,x,dis+1});
+                bfs.push({x,dis+1});
             }
         }
     }
     else{
-        for(i=0;i<t;i++){
+        for(k=0;k<t;k++){
             u = fc.front();
             fc.pop();
-            bfs.push({u,u,0});
-        }
-        while(!bfs.empty()){
-            u = bfs.front().u;
-            v = bfs.front().v;
-            dis = bfs.front().dis;
-            bfs.pop();
-            if(mark2[v][u]) continue;
-            mark2[v][u] = 1;
-            if(storage[v]){
-                for(i=0;i<fact.size();i++){
-                    if(fact[i]==u && !ans[i]){
-                        ans[i] = dis;
-                        break;
-                    } 
+            bfs.push({u,0});
+            while(!bfs.empty()){
+                u = bfs.front().v;
+                dis = bfs.front().dis;
+                bfs.pop();
+                if(mark[u]) continue;
+                mark[u] = 1;
+                if(storage[u]){
+                    ans[k] = dis;
+                    break;
+                }
+                for(auto x:g[u]){
+                    if(mark[x]) continue;
+                    bfs.push({x,dis+1});
                 }
             }
-            for(auto x:g[v]){
-                if(mark2[x][u]) continue;
-                bfs.push({u,x,dis+1});
-            }
+            while(!bfs.empty()) bfs.pop();
         }
     }
     for(i=0;i<t;i++) cout << ans[i] << "\n";
