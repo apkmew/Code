@@ -5,7 +5,7 @@
     School	: Kasetsart University
     Created	: 09 January 2023 [23:58]
     Algo	: Dijkstra
-    Status	: Debuging
+    Status	: Completed
 */
 #include<bits/stdc++.h>
 using namespace std;
