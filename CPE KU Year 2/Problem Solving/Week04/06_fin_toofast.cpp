@@ -20,6 +20,8 @@ priority_queue<A> h;
 vector<A> g[1010];
 int main(){
     ios_base::sync_with_stdio(0); cin.tie(0),cout.tie(0);
+    //freopen("06_fin_toofast.in","r",stdin);
+    //freopen("06_fin_toofast.out","w",stdout);
     int i,n,m,u,v,w,s;
     cin >> n >> m;
     for(i=0;i<m;i++){
@@ -34,6 +36,7 @@ int main(){
         w = h.top().w;
         s = h.top().s;
         h.pop();
+        if(dis[v][s]!=-1) continue;
         dis[v][s] = w;
         if(v==n){
             cout << w << "\n";
