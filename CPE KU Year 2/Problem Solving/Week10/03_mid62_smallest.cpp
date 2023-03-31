@@ -5,7 +5,7 @@
     School	: Kasetsart University
     Created	: 31 March 2023 [16:35]
     Algo	: Dynamic Programming
-    Status	: Incomplete
+    Status	: Completed
 */
 #include<bits/stdc++.h>
 using namespace std;
