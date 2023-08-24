@@ -1,5 +1,10 @@
 #include <stdio.h>
 int main(){
-    printf("%d",-1%4);
+    int a[1000000];
+    int i;
+    for(i=0;i<1000000;i++){
+        a[i]=i;
+    }
+    printf("Hello World!\n");
     return 0;
 }
