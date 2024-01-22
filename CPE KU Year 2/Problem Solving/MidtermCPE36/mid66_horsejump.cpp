@@ -18,7 +18,7 @@ int di[] = { -1, 1,  0, 0 }; // walk i
 int dj[] = {  0, 0, -1, 1 }; // walk j
 int hi[] = { -2, -2, -1, -1,  1, 1,  2, 2 }; // jump i
 int hj[] = { -1,  1, -2,  2, -2, 2, -1, 1 }; // jump j
-int dis[510][510][3];
+int mark[510][510][3];
 int main(){
     ios_base::sync_with_stdio(0); cin.tie(0),cout.tie(0);
     int n;
@@ -40,8 +40,8 @@ int main(){
             int ii = now.i + di[k], jj = now.j + dj[k];             // new i, new j
             if( ii < 1 || jj < 1 || ii > n || jj > n ) continue;    // out of bound
             if( a[ii][jj] == '#' ) continue;                        // can't walk on #
-            if( dis[ii][jj][now.jump] ) continue;                   // visited
-            dis[ii][jj][now.jump] = now.dis+1;                      // mark visited
+            if( mark[ii][jj][now.jump] ) continue;                   // visited
+            mark[ii][jj][now.jump] = 1;                      // mark visited
             bfs.push({ii,jj,now.jump,now.dis+1});                   // push to queue
         }
         if( now.jump ) continue;    // can't jump
@@ -49,8 +49,8 @@ int main(){
             int ii = now.i + hi[k], jj = now.j + hj[k];             // new i, new j
             if( ii < 1 || jj < 1 || ii > n || jj > n ) continue;    // out of bound
             if( a[ii][jj] == '#' ) continue;                        // can't walk on #
-            if( dis[ii][jj][1] ) continue;                          // visited
-            dis[ii][jj][1] = 1;                                     // mark visited
+            if( mark[ii][jj][1] ) continue;                          // visited
+            mark[ii][jj][1] = 1;                                     // mark visited
             bfs.push({ii,jj,1,now.dis+1});                          // push to queue
         }
     }
