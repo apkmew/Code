@@ -4,7 +4,7 @@
     Author	: Apimook T. [APKMEW]
     School	: Kasetsart University
     Created	: 22 January 2024 [15:21]
-    Algo	: Greedy
+    Algo	: Greedy + Binary Search
     Status	: Completed
 */
 #include <bits/stdc++.h>
