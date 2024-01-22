@@ -32,3 +32,5 @@
 *.app
 
 YannixTest
+test*
+Test*
